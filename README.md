@@ -1,5 +1,5 @@
 <p>
-<img width="260" height="170" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.code-io.com%2Fsimple-crud-application-in-phpmyadmin%2F&psig=AOvVaw2D0HXY7g8sEtTwsNTd3i64&ust=1599325593956000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMjTh8T-z-sCFQAAAAAdAAAAABAP" align="right" >
+<img width="260" height="170" src="https://res.cloudinary.com/practicaldev/image/fetch/s--O2cjB-id--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/a3exuz06e9h212pandfr.png" align="right" >
 </p>
 
 
@@ -15,7 +15,7 @@
 ## Contributing
 -- Yesid Gutierrez - Software Engineer                                          
 ## Versioning
-for my learning in Holberton School
+Quick Interview
 ## Authors
 ---Yesid Gutierrez  ingyagutierrez@hotmail.com                                    
                                                                                
