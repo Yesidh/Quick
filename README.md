@@ -126,7 +126,7 @@ change for folder called Quick  using:
 ```
 $ cd Quick
 ```
-cubispro is the folder project name. Now change directori it:
+cubispro is the folder project name. Now change to it:
 
 ```
 $ cd cubispro
@@ -136,7 +136,21 @@ $ cd cubispro
 pip install -r requirements.txt
 ```
 Now we have all the software to work with the app.
-### Run the app:
+### Create the database file:
+make sure your are in the folde Quick/cubispro and run the command it's important for next commands.
+```
+$ python manager.py makemigrations
+```
+after it, use the command:
+```
+$ python manage.py migrate
+```
+Now we are ready for run the app.
+### run de app:
+```
+$ python manage.py runserver
+```
+
 
 ## Contributing
 -- Yesid Gutierrez - Software Engineer                                          
@@ -145,3 +159,4 @@ Quick Interview
 ## Authors
 ---Yesid Gutierrez  ingyagutierrez@hotmail.com                                    
                                                                                
+ 
