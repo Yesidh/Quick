@@ -152,17 +152,13 @@ $ python manage.py runserver
 ```
 ### User register: for test the endpoint you can use your prefered tool whith data:
 ```
-GET /register/
-HTTP 405 Method Not Allowed
 Allow: POST, OPTIONS
 Content-Type: application/json
 Vary: Accept
-
-{
-    "detail": "Method \"GET\" not allowed."
 }
 ```
 ```
+url: http://127.0.0.1:8000/register/
 Media type: application/json
 conten:
 {
