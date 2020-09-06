@@ -45,27 +45,97 @@
 ## Using CRUD and endpoints step by step
 ========================================================================================
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-Important: this deployment is for linux system,
-for other SO some things change.
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+IMPORTANT: this deployment is for linux system, for other SO some things change.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-### software requirements:
+### Software requirements:
 - Make sure that you use python 3: [How to install python 3](https://realpython.com/installing-python/#how-to-install-python-on-linux)
 - Make sure that you use virtual enviroments: [How Does a Virtual Environment Work?](https://realpython.com/python-virtual-environments-a-primer/#how-does-a-virtual-environment-work)
 - Make sure that you are using git: [Getting Started - Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-### adding a virtual enviroment:
+### Adding a virtual enviroment:
 - Creating virtual enviroment:
 ```
 $ virtualenv .env -p python3
 ```
 we will to use a hidden folder for best practices .env.
 
-### activate the virtual enviroment:
+### Activate the virtual enviroment:
 ```
 $ source .env/bin/activate
 ```
-### cloning repositoty
+### Cloning repositoty:
+```
+$ git clone https://github.com/Yesidh/Quick.git
+```
+Now, you have a folder in your local machine called, Quick whit this structure:
+__________________________________________________________________________________________
+|-Quick
+| |-cubispro
+| | |-crud
+| | | |-migrations
+| | | | |-...
+| | | | |-...
+| | | | |-...
+| | | |-admin.py
+| | | |-apps.py
+| | | |-models.py
+| | | |-serializers.py
+| | | |-test.py
+| | | |-urls.py
+| | | |-views.py
+| | |-csvfiles
+| | | |-migrations
+| | | | |-...
+| | | | |-...
+| | | | |-...
+| | | |-admin.py
+| | | |-apps.py
+| | | |-models.py
+| | | |-test.py
+| | | |-urls.py
+| | | |-views.py
+| | |-cubispro
+| | | |-__init__.py
+| | | |-asgi.py
+| | | |-settings.py
+| | | |-urls.py
+| | | |-wsgi.py
+| | |-users
+| | | |-migrations
+| | | | |-...
+| | | | |-...
+| | | | |-...
+| | | |-__init__.py
+| | | |-admin.py
+| | | |-apps.py
+| | | |-models.py
+| | | |-serializers.py
+| | | |-test.py
+| | | |-urls.py
+| | | |-views.py
+| | |-manage.py
+| | |-requirements.txt
+| |-.gitignore
+| |-README.md
+_______________________________________________________________________________________
+
+change for folder called Quick  using:
+```
+$ cd Quick
+```
+cubispro is the folder project name. Now change directori it:
+
+```
+$ cd cubispro
+```
+### Install requirements.txt file:
+```
+pip install -r requirements.txt
+```
+Now we have all the software to work with the app.
+### Run the app:
+
 ## Contributing
 -- Yesid Gutierrez - Software Engineer                                          
 ## Versioning
