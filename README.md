@@ -54,6 +54,18 @@ for other SO some things change.
 - Make sure that you use python 3: [How to install python 3](https://realpython.com/installing-python/#how-to-install-python-on-linux)
 - Make sure that you use virtual enviroments: [How Does a Virtual Environment Work?](https://realpython.com/python-virtual-environments-a-primer/#how-does-a-virtual-environment-work)
 - Make sure that you are using git: [Getting Started - Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+### adding a virtual enviroment:
+- Creating virtual enviroment:
+```
+$ virtualenv .env -p python3
+```
+we will to use a hidden folder for best practices .env.
+
+### activate the virtual enviroment:
+```
+$ source .env/bin/activate
+```
+### cloning repositoty
 ## Contributing
 -- Yesid Gutierrez - Software Engineer                                          
 ## Versioning
