@@ -187,6 +187,7 @@ Vary: Accept
 ```
 - request information
 ```
+url: http://127.0.0.1:8000/login/
 Media type: application/json
 content:
 {
@@ -206,8 +207,115 @@ Vary: Accept
     "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTk5MzcyODg4LCJqdGkiOiI0ZDcyNTkyODcxZjY0ZmE3OGFiZmI1MTZiY2M1MjNhOSIsInVzZXJfaWQiOjF9.770vldsKlprHPFVBlfj3crcIg40BGS323D0AwrD_Jp4"
 }
 ```
-now for every request we need to use the access token render in the login request.
+now for every request we need to use the access token renderer in the login request.
+### Create a client:
+```
+url: http://127.0.0.1:8000/client/
+Allow: GET, POST, PUT, DELETE, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+```
+- GET:
+```
+[
+    {
+        "id": 1,
+        "document": 11111,
+        "first_name": "Jorge",
+        "last_name": "Ramirez",
+        "email": "jorge@ramirez.com"
+    },
+    {
+        "id": 2,
+        "document": 222222,
+        "first_name": "Miguel",
+        "last_name": "Murillo",
+        "email": "miguel@murillo.com"
+    },
+    {
+        "id": 3,
+        "document": 333333,
+        "first_name": "Ramiro",
+        "last_name": "Lagos",
+        "email": "ramiro@lagos.com"
+    },
+    {
+        "id": 4,
+        "document": 44444,
+        "first_name": "Betha",
+        "last_name": "Bermudez",
+        "email": "bertha@bermudez.com"
+    },
+    {
+        "id": 5,
+        "document": 55555,
+        "first_name": "Angelica",
+        "last_name": "Santos",
+        "email": "angelica@santos.com"
+    }
+]
+```
+- POST:
+  - Request information:
+  ```
+  {
+    "document": 66666,
+    "first_name": "Sonia",
+    "last_name": "Sanchez",
+    "email": "sonia@sanchez.com"
+  }
+  ```
+  - Response:
+  ```
+  HTTP 201 Created
+  Allow: GET, POST, PUT, DELETE, HEAD, OPTIONS
+  Content-Type: application/json
+  Vary: Accept
 
+  {
+    "id": 6,
+    "document": 66666,
+    "first_name": "Sonia",
+    "last_name": "Sanchez",
+    "email": "sonia@sanchez.com"
+  }
+  ```
+- PUT:
+  - Request information:
+  ```
+  url: http://127.0.0.1:8000/client/6
+  {
+    "document": 888888,
+    "first_name": "Sonia",
+    "last_name": "Sanchez",
+    "email": "sonia@sanchez.com"
+  }
+  ```
+  - Response
+  ```
+  {
+    "id": 6,
+    "document": 888888,
+    "first_name": "Sonia",
+    "last_name": "Sanchez",
+    "email": "sonia@sanchez.com"
+  }
+  ```
+- Delete:
+  - Request information:
+  ```
+  url: http://127.0.0.1:8000/client/6
+  {
+    "document": 888888,
+    "first_name": "Sonia",
+    "last_name": "Sanchez",
+    "email": "sonia@sanchez.com"
+  }
+  ```
+  - Response
+  ```
+  HTTP/1.1 204 No Content
+  ```
 ## Contributing
 -- Yesid Gutierrez - Software Engineer                                          
 ## Versioning
