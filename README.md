@@ -316,6 +316,63 @@ Vary: Accept
   ```
   HTTP/1.1 204 No Content
   ```
+### crud for Bill:
+- GET:
+```
+HTTP 200 OK
+Allow: GET, POST, PUT, DELETE, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+[
+    {
+        "id": 1,
+        "client_id": 5,
+        "company_name": "Ultrarapidissimo",
+        "nit": 10101010,
+        "code": 20
+    },
+    {
+        "id": 2,
+        "client_id": 4,
+        "company_name": "Panhales Jacinto",
+        "nit": 111111,
+        "code": 21
+    },
+    {
+        "id": 3,
+        "client_id": 3,
+        "company_name": "Licorera RR",
+        "nit": 121212,
+        "code": 22
+    },
+    {
+        "id": 4,
+        "client_id": 2,
+        "company_name": "Restaurante delicioso pollo",
+        "nit": 131313,
+        "code": 23
+    },
+    {
+        "id": 5,
+        "client_id": 1,
+        "company_name": "Cafeteria Don Camilo",
+        "nit": 14141414,
+        "code": 24
+    },
+    {
+        "id": 6,
+        "client_id": 3,
+        "company_name": "Licorera RR",
+        "nit": 131313,
+        "code": 26
+    }
+```
+you can use PUT, POST and DELETE over this endpoint whit the url:
+```
+http://127.0.0.1:8000/bill/
+```
+
 ## Contributing
 -- Yesid Gutierrez - Software Engineer                                          
 ## Versioning
