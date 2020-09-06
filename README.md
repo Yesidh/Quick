@@ -163,7 +163,7 @@ Media type: application/json
 conten:
 {
     "email": "alonicea@aja.com",
-    "username": "alonicea@aja.com"
+    "password": "ayyyyyy"
 }
 ```
 - Response
@@ -173,12 +173,40 @@ HTTP 201 Created
 Allow: POST, OPTIONS
 Content-Type: application/json
 Vary: Accept
-
 {
     "email": "alonicea@aja.com",
-    "username": "alonicea@aja.com"
+    "username": "alonicea@aja.com",
+    "password": "ayyyyyy"
 }
 ```
+### User Login: in this endpoint we start to use JWT in each endpont. The only one doesn't neet it is register.
+```
+Allow: POST, OPTIONS
+Content-Type: application/json
+Vary: Accept
+```
+- request information
+```
+Media type: application/json
+content:
+{
+    "email": "alonicea@aja.com",
+    "password": "ayyyyyy"
+}
+```
+- Response
+```
+HTTP 200 OK
+Allow: POST, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+{
+    "refresh": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTU5OTQ1ODk4OCwianRpIjoiYTM4NjdhYTkxNTliNDA2Mzg5MzU3ZDNmYjBjODI2YzQiLCJ1c2VyX2lkIjoxfQ.IWGkmR8yrWJYfQk_6yK78c1kzMlz-wyUya0wv4uh7oo",
+    "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTk5MzcyODg4LCJqdGkiOiI0ZDcyNTkyODcxZjY0ZmE3OGFiZmI1MTZiY2M1MjNhOSIsInVzZXJfaWQiOjF9.770vldsKlprHPFVBlfj3crcIg40BGS323D0AwrD_Jp4"
+}
+```
+now for every request we need to use the access token render in the login request.
 
 ## Contributing
 -- Yesid Gutierrez - Software Engineer                                          
