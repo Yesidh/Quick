@@ -155,8 +155,8 @@ $ python manage.py runserver
 Allow: POST, OPTIONS
 Content-Type: application/json
 Vary: Accept
-}
 ```
+- request information
 ```
 url: http://127.0.0.1:8000/register/
 Media type: application/json
