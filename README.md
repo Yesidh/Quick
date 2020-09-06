@@ -412,6 +412,91 @@ you can use PUT, POST and DELETE over this endpoint with the url:
 ```
 http://127.0.0.1:8000/product/
 ```
+### crud for billproduct:
+- GET:
+```
+HTTP 200 OK
+Allow: GET, POST, PUT, DELETE, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+[
+    {
+        "bill_id": {
+            "id": 1,
+            "client_id": 5,
+            "company_name": "Ultrarapidissimo",
+            "nit": 10101010,
+            "code": 20
+        },
+        "product_id": {
+            "id": 1,
+            "name": "bicicleta",
+            "description": "todo terreno, rines de lujo, color rojo."
+        }
+    },
+    {
+        "bill_id": {
+            "id": 2,
+            "client_id": 4,
+            "company_name": "Panhales Jacinto",
+            "nit": 111111,
+            "code": 21
+        },
+        "product_id": {
+            "id": 5,
+            "name": "Silla bebe",
+            "description": "adaptable a automovil."
+        }
+    },
+    {
+        "bill_id": {
+            "id": 2,
+            "client_id": 4,
+            "company_name": "Panhales Jacinto",
+            "nit": 111111,
+            "code": 21
+        },
+        "product_id": {
+            "id": 3,
+            "name": "Lentes de sol",
+            "description": "filtro transition ultra alta definicion."
+        }
+    },
+    {
+        "bill_id": {
+            "id": 5,
+            "client_id": 1,
+            "company_name": "Cafeteria Don Camilo",
+            "nit": 14141414,
+            "code": 24
+        },
+        "product_id": {
+            "id": 2,
+            "name": "Portatil",
+            "description": "Apple con bateria de larga duracion."
+        }
+    },
+    {
+        "bill_id": {
+            "id": 4,
+            "client_id": 2,
+            "company_name": "Restaurante delicioso pollo",
+            "nit": 131313,
+            "code": 23
+        },
+        "product_id": {
+            "id": 4,
+            "name": "Zapatillas",
+            "description": "Nike runner."
+        }
+    }
+]
+```
+you can use PUT, POST and DELETE over this endpoint with the url:
+```
+http://127.0.0.1:8000/billproduct
+```
 ## Contributing
 -- Yesid Gutierrez - Software Engineer                                          
 ## Versioning
