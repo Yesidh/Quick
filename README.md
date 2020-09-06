@@ -44,11 +44,11 @@
 ========================================================================================
 ## Using CRUD and endpoints step by step
 ========================================================================================
-
+```
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 IMPORTANT: this deployment is for linux system, for other SO some things change.
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
+```
 ### Software requirements:
 - Make sure that you use python 3: [How to install python 3](https://realpython.com/installing-python/#how-to-install-python-on-linux)
 - Make sure that you use virtual enviroments: [How Does a Virtual Environment Work?](https://realpython.com/python-virtual-environments-a-primer/#how-does-a-virtual-environment-work)
@@ -69,55 +69,57 @@ $ source .env/bin/activate
 $ git clone https://github.com/Yesidh/Quick.git
 ```
 Now, you have a folder in your local machine called, Quick whit this structure:
+```
 __________________________________________________________________________________________
-|-Quick
-| |-cubispro
-| | |-crud
-| | | |-migrations
-| | | | |-...
-| | | | |-...
-| | | | |-...
-| | | |-admin.py
-| | | |-apps.py
-| | | |-models.py
-| | | |-serializers.py
-| | | |-test.py
-| | | |-urls.py
-| | | |-views.py
-| | |-csvfiles
-| | | |-migrations
-| | | | |-...
-| | | | |-...
-| | | | |-...
-| | | |-admin.py
-| | | |-apps.py
-| | | |-models.py
-| | | |-test.py
-| | | |-urls.py
-| | | |-views.py
-| | |-cubispro
-| | | |-__init__.py
-| | | |-asgi.py
-| | | |-settings.py
-| | | |-urls.py
-| | | |-wsgi.py
-| | |-users
-| | | |-migrations
-| | | | |-...
-| | | | |-...
-| | | | |-...
-| | | |-__init__.py
-| | | |-admin.py
-| | | |-apps.py
-| | | |-models.py
-| | | |-serializers.py
-| | | |-test.py
-| | | |-urls.py
-| | | |-views.py
-| | |-manage.py
-| | |-requirements.txt
-| |-.gitignore
-| |-README.md
+|--Quick
+| |--cubispro
+| | |--crud
+| | | |--migrations
+| | | | |--...
+| | | | |--...
+| | | | |--...
+| | | |--admin.py
+| | | |--apps.py
+| | | |--models.py
+| | | |--serializers.py
+| | | |--test.py
+| | | |--urls.py
+| | | |--views.py
+| | |--csvfiles
+| | | |--migrations
+| | | | |--...
+| | | | |--...
+| | | | |--...
+| | | |--admin.py
+| | | |--apps.py
+| | | |--models.py
+| | | |--test.py
+| | | |--urls.py
+| | | |--views.py
+| | |--cubispro
+| | | |--__init__.py
+| | | |--asgi.py
+| | | |--settings.py
+| | | |--urls.py
+| | | |--wsgi.py
+| | |--users
+| | | |--migrations
+| | | | |--...
+| | | | |--...
+| | | | |--...
+| | | |--__init__.py
+| | | |--admin.py
+| | | |--apps.py
+| | | |--models.py
+| | | |--serializers.py
+| | | |--test.py
+| | | |--urls.py
+| | | |--views.py
+| | |--manage.py
+| | |--requirements.txt
+| |--.gitignore
+| |--README.md
+```
 _______________________________________________________________________________________
 
 change for folder called Quick  using:
