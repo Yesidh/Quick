@@ -26,7 +26,7 @@ class CsvView(APIView):
 
         response = HttpResponse(content_type='text/csv')
         response['Content-Disposition'] = 'attachment; ' \
-                                          'filename="Client List.csv"'
+                                          'filename="clientList.csv"'
         writer = csv.DictWriter(response, fieldnames=['Document',
                                                       'Full Name',
                                                       'Count of Bill'])

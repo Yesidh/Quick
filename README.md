@@ -497,6 +497,13 @@ you can use PUT, POST and DELETE over this endpoint with the url:
 ```
 http://127.0.0.1:8000/billproduct
 ```
+## Generate csv file with all clients:
+```
+http://127.0.0.1:8000/csvclient
+```
+This generate a csv file called clientList.csv
+## upload CSV file with clients for generate Client models:
+This endpoint don't work correctly
 ## Contributing
 -- Yesid Gutierrez - Software Engineer                                          
 ## Versioning
