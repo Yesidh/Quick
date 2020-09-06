@@ -150,7 +150,7 @@ Now we are ready for run the app.
 ```
 $ python manage.py runserver
 ```
-### User register: for test the endpoint you can use your prefered tool whith data:
+### User register: create a user, don't need to use JWT. You can use your prefered tool for request:
 ```
 Allow: POST, OPTIONS
 Content-Type: application/json
