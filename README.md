@@ -150,7 +150,39 @@ Now we are ready for run the app.
 ```
 $ python manage.py runserver
 ```
+### User register: for test the endpoint you can use your prefered tool whith data:
+```
+GET /register/
+HTTP 405 Method Not Allowed
+Allow: POST, OPTIONS
+Content-Type: application/json
+Vary: Accept
 
+{
+    "detail": "Method \"GET\" not allowed."
+}
+```
+```
+Media type: application/json
+conten:
+{
+    "email": "alonicea@aja.com",
+    "username": "alonicea@aja.com"
+}
+```
+Response
+```
+POST /register/
+HTTP 201 Created
+Allow: POST, OPTIONS
+Content-Type: application/json
+Vary: Accept
+
+{
+    "email": "alonicea@aja.com",
+    "username": "alonicea@aja.com"
+}
+```
 
 ## Contributing
 -- Yesid Gutierrez - Software Engineer                                          
