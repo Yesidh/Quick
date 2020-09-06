@@ -26,9 +26,12 @@ class ClientSerializer(serializers.Serializer):
 
     def update(self, instance, validated_data):
         """Update and return an existing Client instance"""
-        instance.document = validated_data.get('document', instance.document)
-        instance.first_name = validated_data.get('first_name', instance.first_name)
-        instance.last_name = validated_data.get('last_name', instance.last_name)
+        instance.document = validated_data.get('document',
+                                               instance.document)
+        instance.first_name = validated_data.get('first_name',
+                                                 instance.first_name)
+        instance.last_name = validated_data.get('last_name',
+                                                instance.last_name)
         instance.email = validated_data.get('email', instance.email)
         instance.save()
         return instance
@@ -53,14 +56,15 @@ class ProductSerializer(serializers.Serializer):
     def update(self, instance, validated_data):
         """Update and return an existing Product instance"""
         instance.name = validated_data.get('name', instance.name)
-        instance.description = validated_data.get('description', instance.description)
+        instance.description = validated_data.get('description',
+                                                  instance.description)
         instance.save()
         return instance
 
 class BillProductSerializer(serializers.ModelSerializer):
     """ Serializer class for BillProduct class"""
-    bill_id = BillSerializer(many=True, read_only=True)
-    product_id = ProductSerializer(many=True, read_only=True)
+    bill_id = BillSerializer(read_only=True)
+    product_id = ProductSerializer(read_only=True)
 
     class Meta:
         model = BillProduct

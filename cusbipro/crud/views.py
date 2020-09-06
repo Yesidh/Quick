@@ -1,16 +1,16 @@
 """
-============================
+=======================================
 Class-based views for:
 Client, Bill, Product and BillProduct
 =======================================
 """
 
 # Django
-from django.http import Http404
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
+
 # Local app crud
 from crud.models import Client, Bill, Product, BillProduct
 from crud.serializers import ClientSerializer, BillSerializer,\
@@ -19,7 +19,7 @@ from crud.serializers import ClientSerializer, BillSerializer,\
 class ClientView(APIView):
     """ Create, Retrieve, Update and Delete a Client instance """
 
-    #permission_classes = (IsAuthenticated, )
+    permission_classes = (IsAuthenticated, )
 
     def post(self, request, format=None):
         """ Create and Return a Client instance """
@@ -37,7 +37,8 @@ class ClientView(APIView):
 
     def put(self, request, pk, format=None):
         """ Update and Return a Client instance"""
-        clientUpdate = Client.objects.raw(f'SELECT * FROM crud_client WHERE id = {pk}')
+        clientUpdate = Client.objects.raw(f'SELECT * FROM crud_client '
+                                          f'WHERE id = {pk}')
         serializer = ClientSerializer(clientUpdate[0], data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -46,17 +47,19 @@ class ClientView(APIView):
 
     def delete(self, request, pk, format=None):
         """ Delete a Client instance"""
-        clientDelete = Client.objects.raw(f'SELECT * FROM crud_client WHERE id = {pk}')
+        clientDelete = Client.objects.raw(f'SELECT * FROM crud_client '
+                                          f'WHERE id = {pk}')
         if clientDelete:
             clientDelete[0].delete()
             return Response(status=status.HTTP_204_NO_CONTENT)
-        return Response({"errors": "Client doesn't exist"}, status=status.HTTP_400_BAD_REQUEST)
+        return Response({"errors": "Client doesn't exist"},
+                        status=status.HTTP_400_BAD_REQUEST)
 
 
 class BillView(APIView):
     """ Create, Retrieve, Update and Delete a Bill instance """
 
-    #permission_classes = (IsAuthenticated, )
+    permission_classes = (IsAuthenticated, )
 
     def post(self, request, format=None):
         """ Create and Return a Bill instance """
@@ -74,7 +77,8 @@ class BillView(APIView):
 
     def put(self, request, pk, format=None):
         """ Update and Return a Bill instance"""
-        billUpdate = Bill.objects.raw(f'SELECT * FROM crud_bill WHERE id = {pk}')
+        billUpdate = Bill.objects.raw(f'SELECT * FROM crud_bill '
+                                      f'WHERE id = {pk}')
         serializer = BillSerializer(billUpdate[0], data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -83,16 +87,18 @@ class BillView(APIView):
 
     def delete(self, request, pk, format=None):
         """ Delete a Bill instance"""
-        billDelete = Bill.objects.raw(f'SELECT * FROM crud_bill WHERE id = {pk}')
+        billDelete = Bill.objects.raw(f'SELECT * FROM crud_bill '
+                                      f'WHERE id = {pk}')
         if billDelete:
             billDelete[0].delete()
             return Response(status=status.HTTP_204_NO_CONTENT)
-        return Response({"errors": "Bill doesn't exist"}, status=status.HTTP_400_BAD_REQUEST)
+        return Response({"errors": "Bill doesn't exist"},
+                        status=status.HTTP_400_BAD_REQUEST)
 
 class ProductView(APIView):
     """ Create, Retrieve, Update and Delete a Product instance """
 
-    #permission_classes = (IsAuthenticated, )
+    permission_classes = (IsAuthenticated, )
 
     def post(self, request, format=None):
         """ Create and Return a Product instance """
@@ -110,7 +116,8 @@ class ProductView(APIView):
 
     def put(self, request, pk, format=None):
         """ Update and Return a Product instance"""
-        productUpdate = Product.objects.raw(f'SELECT * FROM crud_product WHERE id = {pk}')
+        productUpdate = Product.objects.raw(f'SELECT * FROM crud_product '
+                                            f'WHERE id = {pk}')
         serializer = ProductSerializer(productUpdate[0], data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -119,17 +126,19 @@ class ProductView(APIView):
 
     def delete(self, request, pk, format=None):
         """ Delete a Product instance"""
-        productDelete = Product.objects.raw(f'SELECT * FROM crud_product WHERE id = {pk}')
+        productDelete = Product.objects.raw(f'SELECT * FROM crud_product '
+                                            f'WHERE id = {pk}')
         if productDelete:
             productDelete[0].delete()
             return Response(status=status.HTTP_204_NO_CONTENT)
-        return Response({"errors": "Product doesn't exist"}, status=status.HTTP_400_BAD_REQUEST)
+        return Response({"errors": "Product doesn't exist"},
+                        status=status.HTTP_400_BAD_REQUEST)
 
 
 class BillProductView(APIView):
     """ Create, Retrieve, Update and Delete a Product instance """
 
-    #permission_classes = (IsAuthenticated, )
+    permission_classes = (IsAuthenticated, )
 
     def post(self, request, format=None):
         """ Create and Return a BillProduct instance """
@@ -141,14 +150,16 @@ class BillProductView(APIView):
 
     def get(self, request, format=None):
         """Retrieve all Bill Product instances"""
-        listBillProducts = BillProduct.objects.raw('SELECT * FROM crud_billproduct')
-        import pdb; pdb.set_trace()
+        listBillProducts = BillProduct.objects.raw('SELECT * '
+                                                   'FROM crud_billproduct')
         serializer = BillProductSerializer(listBillProducts, many=True)
         return Response(serializer.data)
 
     def put(self, request, pk, format=None):
         """ Update and Return a BillProduct instance"""
-        billProductUpdate = BillProduct.objects.raw(f'SELECT * FROM crud_billproduct WHERE id = {pk}')
+        billProductUpdate = BillProduct.objects.raw(f'SELECT * '
+                                                    f'FROM crud_billproduct '
+                                                    f'WHERE id = {pk}')
         serializer = BillProductSerializer(billProductUpdate[0], data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -157,8 +168,11 @@ class BillProductView(APIView):
 
     def delete(self, request, pk, format=None):
         """ Delete a BillProduct instance"""
-        billProductDelete = BillProduct.objects.raw(f'SELECT * FROM crud_billproduct WHERE id = {pk}')
+        billProductDelete = BillProduct.objects.raw(f'SELECT * '
+                                                    f'FROM crud_billproduct '
+                                                    f'WHERE id = {pk}')
         if billProductDelete:
             billProductDelete[0].delete()
             return Response(status=status.HTTP_204_NO_CONTENT)
-        return Response({"errors": "Product doesn't exist"}, status=status.HTTP_400_BAD_REQUEST)
+        return Response({"errors": "Product doesn't exist"},
+                        status=status.HTTP_400_BAD_REQUEST)
