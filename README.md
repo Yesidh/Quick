@@ -372,7 +372,46 @@ you can use PUT, POST and DELETE over this endpoint whit the url:
 ```
 http://127.0.0.1:8000/bill/
 ```
+### crud for product:
+- GET:
+```
+HTTP 200 OK
+Allow: GET, POST, PUT, DELETE, HEAD, OPTIONS
+Content-Type: application/json
+Vary: Accept
 
+[
+    {
+        "id": 1,
+        "name": "bicicleta",
+        "description": "todo terreno, rines de lujo, color rojo."
+    },
+    {
+        "id": 2,
+        "name": "Portatil",
+        "description": "Apple con bateria de larga duracion."
+    },
+    {
+        "id": 3,
+        "name": "Lentes de sol",
+        "description": "filtro transition ultra alta definicion."
+    },
+    {
+        "id": 4,
+        "name": "Zapatillas",
+        "description": "Nike runner."
+    },
+    {
+        "id": 5,
+        "name": "Silla bebe",
+        "description": "adaptable a automovil."
+    }
+]
+```
+you can use PUT, POST and DELETE over this endpoint with the url:
+```
+http://127.0.0.1:8000/product/
+```
 ## Contributing
 -- Yesid Gutierrez - Software Engineer                                          
 ## Versioning
