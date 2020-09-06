@@ -7,6 +7,7 @@
 
 
 # :colombia: API CRUD with Django rest framework
+
 ## Requirement Skills
 - Algorithms
 - PEP8 good practices
@@ -14,6 +15,7 @@
 - Database design
 - SQL knowledge
 - Django Rest_Framework and python knowoledge
+
 ## The Situation
 - Challenge: Develop a REST API that permits make CRUD operations over entities:
   - Client      [id(pk), document, first_name, last_name, email]
@@ -29,6 +31,7 @@
 - Recomendations:
   - Use SQL for queries over ORM.
   - less abstraction level in serializers and views files.
+
 ## Built With
 - Python3
 - Django==3.1.1
@@ -36,11 +39,21 @@
 - djangorestframework-simplejwt==4.4.0
 - editors(Emacs and Pycharm)
 - OS(Linux Mint)
+- virtualenv 15.1.0
 
 ========================================================================================
 ## Using CRUD and endpoints step by step
 ========================================================================================
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Important: this deployment is for linux system,
+for other SO some things change.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+### software requirements:
+- Make sure that you use python 3: [How to install python 3](https://realpython.com/installing-python/#how-to-install-python-on-linux)
+- Make sure that you use virtual enviroments: [How Does a Virtual Environment Work?](https://realpython.com/python-virtual-environments-a-primer/#how-does-a-virtual-environment-work)
+- Make sure that you are using git: [Getting Started - Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 ## Contributing
 -- Yesid Gutierrez - Software Engineer                                          
 ## Versioning
