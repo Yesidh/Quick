@@ -166,7 +166,7 @@ conten:
     "username": "alonicea@aja.com"
 }
 ```
-Response
+- Response
 ```
 POST /register/
 HTTP 201 Created
