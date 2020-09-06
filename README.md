@@ -179,7 +179,7 @@ Vary: Accept
     "password": "ayyyyyy"
 }
 ```
-### User Login: in this endpoint we start to use JWT in each endpont. The only one doesn't neet it is register.
+### User Login: in this endpoint we start to use JWT in each one of it. The only one doesn't neet it is register.
 ```
 Allow: POST, OPTIONS
 Content-Type: application/json
