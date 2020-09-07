@@ -49,4 +49,3 @@ class CsvUploadFile(APIView):
         """ Create Client instances from a file"""
 
         file_obj = request.data['file']
-        import pdb; pdb.set_trace()
